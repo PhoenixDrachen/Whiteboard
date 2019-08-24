@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div>
+    <nav>
       <Totals />
       <NavBar />
       <Goals />
-    </div>
+    </nav>
   </div>
 </template>
 
@@ -41,3 +41,21 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+@import '~/assets/variables';
+
+html{
+  background-color:$light_base;
+}
+
+nav{
+  display:flex;
+  flex-direction: row;
+  padding:15px;
+  #NavBar{
+    flex-grow:3;
+    padding-left:10px;
+    padding-right:10px;
+  }
+}
+</style>

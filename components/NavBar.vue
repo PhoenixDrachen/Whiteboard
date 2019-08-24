@@ -1,11 +1,21 @@
 <template>
-    <div>
+    <div id="NavBar">
         <div class="navbar_wrapper">
-            <a href="#">test</a>
-            <a href="#">test</a>
-            <a href="#">test</a>
-            <a href="#">test</a>
-            <a href="#">test</a>
+            <div class="icon_container active">
+                <img src="/Closed-Light.svg" alt="">
+            </div>
+            <div class="icon_container">
+                <img src="/Numbers-Dark.svg" alt="">
+            </div>
+            <div class="icon_container">
+                <img src="/Taks-Dark.svg" alt="">
+            </div>
+            <div class="icon_container">
+                <img src="/Deals-Dark.svg" alt="">
+            </div>
+            <div class="icon_container">
+                <img src="/Launch-Dark.svg" alt="">
+            </div>
         </div>
     </div>
 </template>
@@ -15,15 +25,26 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
+@import '~/assets/variables';
+
 .navbar_wrapper{
-    position:absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    left:calc(50% - 225px);
-    top:15px;
-    height:150px;
-    width:450px
+    height:125px;
+    .icon_container{
+        height:100px;
+        padding:10px;
+        img{
+            width:75px;
+        }
+        &.active{
+            background-color:$dark_base;
+            flex-grow: 2;
+            border-radius:25px;
+        }
+    }
 }
+
 </style>

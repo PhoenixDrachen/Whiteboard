@@ -5,8 +5,8 @@
       <div id="NavBar">
         <div class="navbar_wrapper">
             <div v-for="(item, key) of items" :key="key" :class="{'icon_container':true, 'active':(active == item.icon.name)}">
-                <nuxt-link :to="item.to" >
-                    <svg :viewBox="item.icon.viewBox" :id="item.icon.id" @click="active = item.icon.name">
+                <nuxt-link :to="item.to" @click.native="active = item.icon.name" >
+                    <svg :viewBox="item.icon.viewBox" :id="item.icon.id" >
                         <use :xlink:href="'/' + item.icon.name + '.svg#Layer_2'" />
                     </svg>
                     <span>{{ item.icon.name }}</span>
@@ -59,13 +59,13 @@ export default {
           to: { name: 'tasks' }
         },
         {
-          title: 'Deals',
+          title: 'Clients',
           icon: {
-            name: 'Deals',
+            name: 'Clients',
             viewBox: '0 0 368.85 365.06',
-            id: 'deals'
+            id: 'clients'
           },
-          to: { name: 'deals' }
+          to: { name: 'clients' }
         },
         {
           title: 'Launch',
@@ -103,7 +103,7 @@ nav{
   #closed,
   #totals,
   #launch,
-  #deals{
+  #clients{
       width:75px;
       fill:$dark_base;
       transition: fill .25s ease-out
@@ -122,23 +122,23 @@ nav{
           overflow:hidden;
           border-radius:25px;
           position: relative;
-          transition:width 1s ease-out, background-color 1s ease-out;
+          transition:width .5s .25s ease-out, background-color 1s ease-out;
           &:hover{
               background-color:$dark_base;
               #tasks,
               #closed,
               #totals,
               #launch,
-              #deals{
+              #clients{
                   fill:$light_base
               }
           }
           span{
               position:absolute;
               opacity: 0;
-              top: calc(50% - 24.4px);
+              top: calc(50% - 30px);
               right:-150px;
-              transition: right 1s ease-out;
+              right:20px;
           }
           &.active{
               background-color:$dark_base;
@@ -148,17 +148,21 @@ nav{
               font-family: 'Roboto';
               padding-right:15px;
               font-weight:700;
+              a{
+                display:inline-block;
+                height:75px;
+              }
               #tasks,
               #closed,
               #totals,
               #launch,
-              #deals{
+              #clients{
                   fill:$light_base
               }
               span{
-                  right:20px;
                   color:$light_base;
-                  opacity:1
+                  opacity:1;
+                  transition: opacity .5s .55s ease-out
               }
           }
       }

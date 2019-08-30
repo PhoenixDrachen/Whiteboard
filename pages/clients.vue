@@ -1,6 +1,6 @@
 <template>
     <div>
-        Deals
+        clients
     </div>
 </template>
 

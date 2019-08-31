@@ -145,7 +145,7 @@ nav{
               width:250px;
               color:$light_base;
               font-size: 40px;
-              font-family: 'Roboto';
+              font-family: $body_font;
               padding-right:15px;
               font-weight:700;
               a{

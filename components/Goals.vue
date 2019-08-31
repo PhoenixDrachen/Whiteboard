@@ -35,7 +35,7 @@ export default {}
     flex-direction: row;
     justify-content: space-between;
     span{
-      font-family:'Roboto';
+      font-family:$body_font;
       font-weight: 700;
       font-size:32px;
       line-height:38px;

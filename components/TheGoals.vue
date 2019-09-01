@@ -3,11 +3,11 @@
     <div class="goals_wrapper">
       <div class="goals_month_wrapper">
         <span class="goals_month_header">Monthly Goal:</span>
-        <span class="goals_month_amount">${{55*2}}</span>
+        <span class="goals_month_amount">${{ 55*2 }}</span>
       </div>
       <div class="goals_week_wrapper">
         <span class="goals_week_header">Weekly Goal:</span>
-        <span class="goals_week_amount">${{55*2}}</span>
+        <span class="goals_week_amount">${{ 55*2 }}</span>
       </div>
     </div>
   </div>

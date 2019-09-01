@@ -1,7 +1,7 @@
 <template>
-    <div>
-        launch
-    </div>
+  <div>
+    launch
+  </div>
 </template>
 
 <script>

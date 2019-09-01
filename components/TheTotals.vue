@@ -3,11 +3,11 @@
     <div class="totals_wrapper">
       <div class="totals_month_wrapper">
         <span class="totals_month_header">Month To Date:</span>
-        <span class="totals_month_amount">${{55*2}}</span>
+        <span class="totals_month_amount">${{ 55*2 }}</span>
       </div>
       <div class="totals_year_wrapper">
         <span class="totals_year_header">Year To Date:</span>
-        <span class="totals_year_amount">${{55*2}}</span>
+        <span class="totals_year_amount">${{ 55*2 }}</span>
       </div>
     </div>
   </div>

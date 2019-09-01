@@ -1,32 +1,32 @@
 <template>
   <div>
     <nav>
-      <Totals />
+      <TheTotals />
       <div id="NavBar">
         <div class="navbar_wrapper">
-            <div v-for="(item, key) of items" :key="key" :class="{'icon_container':true, 'active':(active == item.icon.name)}">
-                <nuxt-link :to="item.to" @click.native="active = item.icon.name" >
-                    <svg :viewBox="item.icon.viewBox" :id="item.icon.id" >
-                        <use :xlink:href="'/' + item.icon.name + '.svg#Layer_2'" />
-                    </svg>
-                    <span>{{ item.icon.name }}</span>
-                </nuxt-link>
-            </div>
+          <div v-for="(item, key) of items" :key="key" :class="{'icon_container':true, 'active':(active == item.icon.id)}">
+            <nuxt-link :to="item.to" @click.native="active = item.icon.id">
+              <svg :id="item.icon.id" :viewBox="item.icon.viewBox">
+                <use :xlink:href="'/' + item.icon.name + '.svg#Layer_2'" />
+              </svg>
+              <span>{{ item.icon.name }}</span>
+            </nuxt-link>
+          </div>
         </div>
       </div>
-      <Goals />
+      <TheGoals />
     </nav>
     <nuxt />
   </div>
 </template>
 
 <script>
-import Totals from '~/components/Totals'
-import Goals from '~/components/Goals'
+import TheTotals from '~/components/TheTotals'
+import TheGoals from '~/components/TheGoals'
 export default {
   components: {
-    Totals,
-    Goals
+    TheTotals,
+    TheGoals
   },
   data () {
     return {
@@ -77,7 +77,7 @@ export default {
           to: { name: 'launch' }
         }
       ],
-      active: 'Closed'
+      active: this.$nuxt.$route.name
     }
   }
 }

@@ -1,7 +1,7 @@
 <template>
-    <div>
-        Totals
-    </div>
+  <div>
+    Totals
+  </div>
 </template>
 
 <script>

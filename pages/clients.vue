@@ -1,15 +1,15 @@
 <template>
-    <div id="clients" >
-        <div class="cardContainer" v-for="developer in developers" :key="developer.name" >
-            <DeveloperClientCard :developer="developer" />
-        </div>
+  <div id="clients">
+    <div v-for="developer in developers" :key="developer.name" class="cardContainer">
+      <DeveloperClientList :developer="developer" />
     </div>
+  </div>
 </template>
 
 <script>
-import DeveloperClientCard from '../components/DeveloperClientCard'
+import DeveloperClientList from '../components/DeveloperClientList'
 export default {
-  components: { DeveloperClientCard },
+  components: { DeveloperClientList },
   data () {
     return {
       developers: [

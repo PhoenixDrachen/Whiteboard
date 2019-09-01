@@ -1,19 +1,28 @@
 <template>
-    <div class="developerClientCard">
-        <h2>{{ this.developerName }}</h2>
-        <div class="bottomBar" />
-        <div class="clientHeader">
-          <p>Due</p>
-          <p class="clientNameHeader">Client</p>
-          <p>Status</p>
-        </div>
+  <div class="developerClientCard">
+    <h2>{{ developerName }}</h2>
+    <div class="bottomBar" />
+    <div class="clientHeader">
+      <p class="dueDateHeader">
+        Due
+      </p>
+      <p class="taskHeader">
+        Task
+      </p>
+      <p class="statusHeader">
+        Status
+      </p>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    developer: Object
+    developer: {
+      type: Object,
+      default: null
+    }
   },
   data () {
     return {
@@ -70,8 +79,14 @@ export default {
               width:50px;
             }
           }
-          .clientNameHeader{
+          .taskHeader{
             flex-grow: 5
+          }
+          .dueDateHeader{
+            text-align: left;
+          }
+          .statusHeader{
+            text-align:right;
           }
         }
     }

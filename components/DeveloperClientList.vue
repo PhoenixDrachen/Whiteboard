@@ -7,7 +7,7 @@
         Due
       </p>
       <p class="taskHeader">
-        Task
+        Client
       </p>
       <p class="statusHeader">
         Status

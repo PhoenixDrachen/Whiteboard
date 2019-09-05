@@ -4,8 +4,8 @@
       <TheTotals />
       <div id="NavBar">
         <div class="navbar_wrapper">
-          <div v-for="(item, key) of items" :key="key" :class="{'icon_container':true, 'active':(active == item.icon.id)}">
-            <nuxt-link :to="item.to" @click.native="active = item.icon.id">
+          <div v-for="(item, key) of items" :key="key" :class="{'icon_container':true, 'active':(active == item.to.name)}">
+            <nuxt-link :to="item.to" @click.native="active = item.to.name">
               <svg :id="item.icon.id" :viewBox="item.icon.viewBox">
                 <use :xlink:href="'/' + item.icon.name + '.svg#Layer_2'" />
               </svg>

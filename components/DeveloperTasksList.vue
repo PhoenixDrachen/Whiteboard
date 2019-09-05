@@ -7,7 +7,7 @@
         Due
       </p>
       <p class="clientNameHeader">
-        Client
+        Task
       </p>
       <p class="assignedToHeader">
         Assigned

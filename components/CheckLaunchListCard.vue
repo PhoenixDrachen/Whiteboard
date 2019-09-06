@@ -1,15 +1,15 @@
 <template>
-  <div class="developerClientCard">
-    <h2>{{ developerName }}</h2>
+  <div class="checkLaunchCard">
+    <h2>To Be Checked</h2>
     <div class="bottomBar" />
-    <div class="clientHeader">
+    <div class="checkListHeader">
       <p class="dueDateHeader">
-        Due
+        Date
       </p>
-      <p class="clientNameHeader">
-        Task
+      <p class="clientHeader">
+        Client
       </p>
-      <p class="assignedToHeader">
+      <p class="assignedHeader">
         Assigned
       </p>
     </div>
@@ -17,24 +17,12 @@
 </template>
 
 <script>
-export default {
-  props: {
-    developer: {
-      type: Object,
-      default: null
-    }
-  },
-  data () {
-    return {
-      developerName: this.developer.name
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
 @import '~/assets/variables.scss';
-    .developerClientCard{
+    .checkLaunchCard{
         width:100%;
         height:550px;
         background-color: $dark_accent;
@@ -55,12 +43,12 @@ export default {
           background-color:$light_base;
           border-radius:25px;
         }
-        .clientHeader{
+        .checkListHeader{
           margin-top:5px;
           display:flex;
           flex-direction:row;
           p{
-            width:75px;
+            width:50px;
             flex-grow:1;
             text-align:center;
             font-size:24px;
@@ -79,14 +67,14 @@ export default {
               width:50px;
             }
           }
-          .clientNameHeader{
+          .clientHeader{
             flex-grow: 5
           }
-          // .assignedToHeader{
-          //   text-align:right;
-          // }
           // .dueDateHeader{
-          //   text-align:left;
+          //   text-align: left;
+          // }
+          // .assignedHeader{
+          //   text-align:right;
           // }
         }
     }

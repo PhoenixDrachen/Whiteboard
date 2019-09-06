@@ -27,7 +27,7 @@ export default {}
   padding:10px;
   background-color:$light_accent;
   height:125px;
-  border-radius:5px;
+  border-radius:10px;
   box-shadow: 10px 10px 20px rgba(0,0,0,.5);
   justify-content: space-around;
   .totals_month_wrapper, .totals_year_wrapper{

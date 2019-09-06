@@ -106,7 +106,8 @@ nav{
   #clients{
       width:75px;
       fill:$dark_base;
-      transition: fill .25s ease-out
+      transition: fill .25s ease-out, filter .25s ease-out;
+      filter: drop-shadow( 3px 3px 2px rgba(31, 36, 33, .7));
   }
 
   .navbar_wrapper{
@@ -120,7 +121,7 @@ nav{
           width:100px;
           padding:12px;
           overflow:hidden;
-          border-radius:25px;
+          border-radius:10px;
           position: relative;
           transition:width .5s .25s ease-out, background-color 1s ease-out;
           &:hover{
@@ -157,7 +158,7 @@ nav{
               #totals,
               #launch,
               #clients{
-                  fill:$light_base
+                  fill:$light_base;
               }
               span{
                   color:$light_base;

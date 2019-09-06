@@ -38,7 +38,7 @@ export default {
         width:100%;
         height:550px;
         background-color: $dark_accent;
-        border-radius:25px;
+        border-radius:10px;
         box-shadow: 10px 10px 20px rgba(0,0,0,.5);
         padding-left:10px;
         padding-right:10px;
@@ -67,7 +67,7 @@ export default {
             font-weight:700;
             color:$light_base;
             font-family:$body_font;
-            // border-bottom:2px solid $light_base;
+            border-bottom:2px solid $light_base;
             margin-left:5px;
             margin-right:5px;
             justify-content: space-between;
@@ -82,12 +82,12 @@ export default {
           .taskHeader{
             flex-grow: 5
           }
-          .dueDateHeader{
-            text-align: left;
-          }
-          .statusHeader{
-            text-align:right;
-          }
+          // .dueDateHeader{
+          //   text-align: left;
+          // }
+          // .statusHeader{
+          //   text-align:right;
+          // }
         }
     }
 </style>
